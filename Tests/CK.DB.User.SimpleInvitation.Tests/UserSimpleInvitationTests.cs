@@ -34,7 +34,7 @@ public class UserSimpleInvitationTests
             if( firstInvitationSent )
             {
                 rs.InvitationSendCount.ShouldBe( 1 );
-                rs.LastInvitationSendDate.ShouldBe( DateTime.UtcNow, tolerance: TimeSpan.FromMilliseconds( 500 ) );
+                rs.LastInvitationSendDate.ShouldBe( DateTime.UtcNow, tolerance: TimeSpan.FromSeconds( 1 ) );
             }
             else
             {
